@@ -7,53 +7,40 @@
   <script src="index.js" defer></script>
   <link rel="stylesheet" href="output.css">
   <style>
-    /* Phone-specific fixes (under 640px) */
     @media (max-width: 639px) {
-      /* Ensure content doesn't overflow horizontally */
-      body {
-        overflow-x: hidden;
-        min-width: 320px;
-      }
-      
-      /* Fix navigation layout */
-      nav ul {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-      
-      /* Center-align main content */
-      main {
-        text-align: center;
-      }
-      
-      /* Adjust button positioning */
-      button {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-      }
-      
-      /* Make feature cards full width */
-      article > div {
-        width: 90%;
-        margin: 0 auto 1rem auto;
-      }
-      
-      /* Pricing cards adjustments */
-      section > div {
-        width: 90%;
-        margin: 0 auto 1rem auto;
-      }
-      
-      /* Testimonial cards adjustments */
-      .mt-20, .mt-10 {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
+  body {
+    overflow-x: hidden;
+    min-width: 320px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  main {
+    text-align: center;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  article > div,
+  section > div,
+  .mt-20,
+  .mt-10 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+}
+
   </style>
 </head>
 <body class="bg-gray-100 sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden xl:overflow-x-hidden">
