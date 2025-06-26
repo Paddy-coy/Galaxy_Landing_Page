@@ -2,148 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galaxy Landing Page</title>
   <script src="index.js" defer></script>
   <link rel="stylesheet" href="output.css">
-  <style>
-    /* Phone-specific fixes (under 640px) */
-    @media (max-width: 639px) {
-      /* Ensure content doesn't overflow horizontally */
-      body {
-        overflow-x: hidden;
-        min-width: 320px;
-      }
-      
-      /* Fix navigation layout */
-      nav ul {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-      
-      /* Center-align main content */
-      main {
-        text-align: center;
-      }
-      
-      /* Adjust button positioning */
-      button {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-      }
-      
-      /* Make feature cards full width */
-      article > div {
-        width: 90%;
-        margin: 0 auto 1rem auto;
-      }
-      
-      /* Pricing cards adjustments */
-      section > div {
-        width: 90%;
-        margin: 0 auto 1rem auto;
-      }
-      
-      /* Testimonial cards adjustments */
-      .mt-20, .mt-10 {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  </style>
 </head>
-<body class="bg-gray-100 sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden xl:overflow-x-hidden">
+<body class="bg-gray-100 overflow-x-hidden">
 
   <!-- The NavBar -->
   <header class="bg-white w-full">
-    <h2 class="text-blue-700 text-2xl font-bold tracking-wider p-2 relative top-3 sm:relative sm:top-4 xl:ms-16">SynStack</h2>
-    <nav>
-     <ul>
-      <li class="flex justify-end me-10 gap-4 relative bottom-6 text-sm transition ease-in-out lg:justify-center xl:justify-end">
-        <a href="" class="hover:text-blue-500 sm:text-amber-600 sm:text-xl sm:font-bold sm:text-shadow-lg sm:text-shadow-green-700/70">Features</a>
-        <a href="" class="hover:text-blue-500 sm:text-xl sm:text-amber-600 sm:font-bold sm:text-shadow-lg sm:text-shadow-green-700/70">Pricing</a>
-        <a href="" class="hover:text-blue-500 sm:text-xl sm:text-amber-600 sm:font-bold sm:text-shadow-lg sm:text-shadow-green-700/70 xl:me-20">Testimonial</a>
-      </li>
-     </ul>
-    </nav>
+    <div class="flex flex-col sm:flex-row">
+      <h2 class="text-blue-700 text-2xl font-bold tracking-wider p-2 sm:relative sm:top-4 xl:ms-16">SynStack</h2>
+      <nav class="sm:self-center">
+       <ul class="flex flex-col items-end gap-2 pr-4 pb-2 sm:flex-row sm:justify-end sm:me-10 sm:gap-4 sm:relative sm:bottom-6 lg:justify-center xl:justify-end">
+        <li><a href="" class="text-sm hover:text-blue-500 sm:text-amber-600 sm:text-xl sm:font-bold sm:text-shadow-lg sm:text-shadow-green-700/70">Features</a></li>
+        <li><a href="" class="text-sm hover:text-blue-500 sm:text-xl sm:text-amber-600 sm:font-bold sm:text-shadow-lg sm:text-shadow-green-700/70">Pricing</a></li>
+        <li><a href="" class="text-sm hover:text-blue-500 sm:text-xl sm:text-amber-600 sm:font-bold sm:text-shadow-lg sm:text-shadow-green-700/70 xl:me-20">Testimonial</a></li>
+       </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="lg:-ml-40 xl:-ml-20">
+  <main>
 
     <!-- Introductory Page -->
-    <h1 class="text-2xl font-bold text-center mt-14 w-full xl:text-5xl xl:mb-10">Supercharge your team with AI</h1>
-    <h3 class="text-center mt-5 xl:text-2xl text-purple-600/50 font-serif">The ultimate productivity tool for modern teams</h3>
-    <div class="flex justify-between sm:relative sm:-left-10">
-      <button class="bg-blue-500 p-2 w-28 rounded-3xl text-white relative left-72 mt-10 cursor-pointer sm:min-w-40 sm:p-3 md:relative md:left-90 lg:relative lg:left-140 hover:bg-green-600 shadow-2xl shadow-blue-600 transition delay-2000 duration-5000 ease-in-out hover:animate-bounce xl:relative xl:left-175">Get Started</button>
+    <div class="text-center px-4">
+      <h1 class="text-2xl font-bold mt-14 w-full xl:text-5xl xl:mb-10">Supercharge your team with AI</h1>
+      <h3 class="mt-5 xl:text-2xl text-purple-600/50 font-serif">The ultimate productivity tool for modern teams</h3>
+      <button class="bg-blue-500 p-2 w-28 rounded-3xl text-white mx-auto mt-10 cursor-pointer sm:min-w-40 sm:p-3 hover:bg-green-600 shadow-2xl shadow-blue-600 transition delay-2000 duration-5000 ease-in-out hover:animate-bounce">Get Started</button>
     </div>
 
-    <article class="bg-gray w-full h-1/2 ps-10 pb-20 flex flex-col gap-6">
+    <article class="px-4 pb-20 flex flex-col gap-6 items-center sm:items-stretch sm:ps-10">
       <h2 class="pt-20 text-center text-3xl font-bold sm:text-shadow-lg sm:text-shadow-green-700 sm:text-yellow-600 sm:font-mono sm:text-4xl lg:mb-5">Features</h2>
 
-      <div class="bg-white w-150 p-1 h-25 rounded-xl sm:w-120 sm:h-30 sm:mx-auto sm:bg-gradient-to-r sm:from-purple-500 sm:to-pink-600 sm:text-white sm:shadow-green-400/50 sm:shadow-md">
-        <h2 class="font-bold font-mono text-2xl pt-2 pb-1 px-3 sm:text-center">Real-Time Collaboration</h2>
-        <p class="px-3 sm:text-center">Work together seamlessly with live updates and AI-suggestions.</p>
+      <div class="bg-white w-full max-w-[500px] p-4 rounded-xl sm:w-120 sm:h-30 sm:mx-auto sm:bg-gradient-to-r sm:from-purple-500 sm:to-pink-600 sm:text-white sm:shadow-green-400/50 sm:shadow-md">
+        <h2 class="font-bold font-mono text-2xl pt-2 pb-1 sm:text-center">Real-Time Collaboration</h2>
+        <p class="sm:text-center">Work together seamlessly with live updates and AI-suggestions.</p>
       </div>
 
-      <div class="bg-white w-150 p-1 h-25 rounded-xl sm:w-120 sm:h-30 sm:mx-auto sm:bg-gradient-to-r sm:from-purple-500 sm:to-pink-600 sm:text-white sm:shadow-green-400/50 sm:shadow-md">
-        <h2 class="font-bold font-mono text-2xl pt-2 pb-1 px-3 sm:text-center">Smart Automation</h2>
-        <p class="px-3 sm:text-center">Automate repetitive tasks and stay focused on what matters.</p>
+      <div class="bg-white w-full max-w-[500px] p-4 rounded-xl sm:w-120 sm:h-30 sm:mx-auto sm:bg-gradient-to-r sm:from-purple-500 sm:to-pink-600 sm:text-white sm:shadow-green-400/50 sm:shadow-md">
+        <h2 class="font-bold font-mono text-2xl pt-2 pb-1 sm:text-center">Smart Automation</h2>
+        <p class="sm:text-center">Automate repetitive tasks and stay focused on what matters.</p>
       </div>
 
-      <div class="bg-white w-150 p-1 h-25 rounded-xl sm:w-120 sm:h-30 sm:mx-auto sm:bg-gradient-to-r sm:from-purple-500 sm:to-pink-600 sm:text-white sm:shadow-green-400/50 sm:shadow-md">
-        <h2 class="font-bold font-mono text-2xl pt-2 pb-1 px-3 sm:text-center">Advanced Analytics</h2>
-        <p class="px-3 sm:text-center">Get insights and make data-driven decisions in seconds.</p>
+      <div class="bg-white w-full max-w-[500px] p-4 rounded-xl sm:w-120 sm:h-30 sm:mx-auto sm:bg-gradient-to-r sm:from-purple-500 sm:to-pink-600 sm:text-white sm:shadow-green-400/50 sm:shadow-md">
+        <h2 class="font-bold font-mono text-2xl pt-2 pb-1 sm:text-center">Advanced Analytics</h2>
+        <p class="sm:text-center">Get insights and make data-driven decisions in seconds.</p>
       </div>
     </article>
 
-    <section class="flex flex-col gap-6">
-      <h2 class="mt-10 text-center text-3xl font-bold mb-20 sm:text-center sm:text-shadow-lg sm:text-shadow-green-700 sm:text-yellow-600 sm:font-mono sm:text-4xl">Pricing</h2>
+    <section class="px-4 flex flex-col gap-6 items-center sm:items-stretch">
+      <h2 class="mt-10 text-center text-3xl font-bold mb-8 sm:text-shadow-lg sm:text-shadow-green-700 sm:text-yellow-600 sm:font-mono sm:text-4xl">Pricing</h2>
 
-      <div class="bg-white w-150 ms-10 h-65 text-center rounded-2xl sm:w-130 sm:bg-[#2F3061] sm:text-white sm:italic sm:font-serif sm:h-70 sm:mx-auto sm:text-shadow-lg sm:text-shadow-green-700 sm:shadow-green-400/50 sm:shadow-md sm:skew-6 sm:hover:translate-x-1.5 sm:hover:bg-blue-700 sm:transition sm:duration-5000 sm:delay-2000 ease-in-out sm:mb-10">
+      <div class="bg-white w-full max-w-[500px] p-6 text-center rounded-2xl sm:w-130 sm:bg-[#2F3061] sm:text-white sm:italic sm:font-serif sm:h-70 sm:mx-auto sm:text-shadow-lg sm:text-shadow-green-700 sm:shadow-green-400/50 sm:shadow-md sm:skew-6 sm:hover:translate-x-1.5 sm:hover:bg-blue-700 sm:transition sm:duration-5000 sm:delay-2000 ease-in-out sm:mb-10">
         <p class="font-bold text-xl pt-5 pb-3">Starter</p>
-        <p class="text-blue-600 brightness-150 font-bold text-4xl pb-2">$0</p>
+        <p class="text-blue-600 brightness-150 font-bold text-4xl pb-2 sm:text-white">$0</p>
         <p class="leading-8">Basic Tools</p>
         <p class="leading-8">5 Projects</p>
         <p class="leading-8">Email Support</p>
-        <button class="bg-blue-500 p-2 w-24 rounded-3xl text-white relative left-1 cursor-pointer mt-2">Choose</button>
+        <button class="bg-blue-500 p-2 w-24 rounded-3xl text-white mx-auto mt-2 cursor-pointer">Choose</button>
       </div>
 
-      <div class="bg-blue-200 w-150 ms-10 h-70 text-center rounded-2xl border-2 border-blue-600 sm:bg-[#2F3061] sm:text-white sm:italic sm:font-serif sm:h-70 sm:mx-auto sm:w-130 sm:text-shadow-lg sm:text-shadow-green-700 sm:shadow-green-400/50 sm:shadow-md sm:skew-y-6 hover:translate-y-2.5 sm:mb-10 sm:hover:bg-blue-700 sm:transition sm:duration-5000 sm:delay-2000 ease-in-out">
+      <div class="bg-blue-200 w-full max-w-[500px] p-6 text-center rounded-2xl border-2 border-blue-600 sm:bg-[#2F3061] sm:text-white sm:italic sm:font-serif sm:h-70 sm:mx-auto sm:w-130 sm:text-shadow-lg sm:text-shadow-green-700 sm:shadow-green-400/50 sm:shadow-md sm:skew-y-6 hover:translate-y-2.5 sm:mb-10 sm:hover:bg-blue-700 sm:transition sm:duration-5000 sm:delay-2000 ease-in-out">
         <p class="font-bold text-xl pt-5 pb-3">Pro</p>
-        <p class="text-blue-600 brightness-150 font-bold text-4xl pb-2">$29/mo</p>
+        <p class="text-blue-600 brightness-150 font-bold text-4xl pb-2 sm:text-white">$29/mo</p>
         <p class="leading-8">All Starter Features</p>
         <p class="leading-8">Unlimited Projects</p>
         <p class="leading-8">Priority Support</p>
-        <button class="bg-blue-500 p-2 w-24 rounded-3xl text-white relative left-1 cursor-pointer mt-4 mb-4">Choose</button>
+        <button class="bg-blue-500 p-2 w-24 rounded-3xl text-white mx-auto mt-4 mb-4 cursor-pointer">Choose</button>
       </div>
 
-      <div class="bg-white w-150 ms-10 h-65 text-center rounded-2xl pb-2 sm:bg-[#2F3061] sm:text-white sm:italic sm:font-serif sm:h-70 sm:mx-auto sm:w-130 sm:text-shadow-lg sm:text-shadow-green-700 sm:shadow-green-400/50 sm:shadow-md sm:scale-95 sm:hover:bg-blue-700 sm:transition sm:duration-5000 sm:delay-2000 ease-in-out hover:-translate-y-2.5">
+      <div class="bg-white w-full max-w-[500px] p-6 text-center rounded-2xl sm:bg-[#2F3061] sm:text-white sm:italic sm:font-serif sm:h-70 sm:mx-auto sm:w-130 sm:text-shadow-lg sm:text-shadow-green-700 sm:shadow-green-400/50 sm:shadow-md sm:scale-95 sm:hover:bg-blue-700 sm:transition sm:duration-5000 sm:delay-2000 ease-in-out hover:-translate-y-2.5">
         <p class="font-bold text-xl pt-5 pb-3">Enterprise</p>
-        <p class="text-blue-600 brightness-150 font-bold text-4xl">$99/mo</p>
+        <p class="text-blue-600 brightness-150 font-bold text-4xl sm:text-white">$99/mo</p>
         <p class="leading-8">Everything in Pro</p>
         <p class="leading-8">Team Management</p>
         <p class="leading-8">Custom Integrations</p>
-        <button class="bg-blue-500 p-2 w-24 rounded-3xl text-white relative left-1 cursor-pointer mt-2">Choose</button>
+        <button class="bg-blue-500 p-2 w-24 rounded-3xl text-white mx-auto mt-2 cursor-pointer">Choose</button>
       </div>
     </section>
 
-    <h2 class="mt-10 text-4xl font-bold text-center">What People Are Saying</h2>
-    <div class="mt-20 bg-white w-155 h-30 ms-10 rounded-2xl sm:bg-amber-600 sm:text-white sm:w-120 sm:mx-auto sm:italic sm:font-serif sm:shadow-green-400/50 sm:shadow-md">
-      <p class="pt-4 ps-6">"SyncStack has doubled our team's productivity. It's a game changer"</p>
-      <p class="ps-6 pt-2">-— Sarah W, Product Manager</p>
-    </div>
-    <div class="mt-10 bg-white w-155 h-30 ms-10 rounded-2xl sm:w-120 sm:bg-[#313638] sm:mx-auto sm:text-white sm:italic sm:font-serif sm:shadow-green-400/50 sm:shadow-md">
-      <p class="pt-4 ps-6">"We've reduced manual work by 70%. Amazing tool!"</p>
-      <p class="ps-6 pt-2">-— James T., CTO</p>
+    <div class="px-4">
+      <h2 class="mt-10 text-4xl font-bold text-center">What People Are Saying</h2>
+      <div class="mt-8 bg-white w-full max-w-[500px] p-6 mx-auto rounded-2xl sm:bg-amber-600 sm:text-white sm:w-120 sm:italic sm:font-serif sm:shadow-green-400/50 sm:shadow-md">
+        <p>"SyncStack has doubled our team's productivity. It's a game changer"</p>
+        <p class="font-semibold mt-2">— Sarah W, Product Manager</p>
+      </div>
+      <div class="mt-6 bg-white w-full max-w-[500px] p-6 mx-auto rounded-2xl sm:w-120 sm:bg-[#313638] sm:text-white sm:italic sm:font-serif sm:shadow-green-400/50 sm:shadow-md">
+        <p>"We've reduced manual work by 70%. Amazing tool!"</p>
+        <p class="font-semibold mt-2">— James T., CTO</p>
+      </div>
     </div>
   </main>
 
   <footer class="mt-20">
-    <div class="bg-[#246EB9] w-full text-white text-center h-15 py-4">
+    <div class="bg-[#246EB9] w-full text-white text-center py-4">
       &copy; 2025 SyncStack. All rights reserved.
     </div>
   </footer>
